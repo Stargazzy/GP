@@ -4,10 +4,14 @@ package Tests;
 import Pages.BranchesPage;
 import Pages.LoginPage;
 import Utilities.Driver;
+import org.junit.AfterClass;
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -22,7 +26,8 @@ public class BranchesTest {
     Actions actions = new Actions(driver);
 
     @BeforeClass
-    public void setup(){
+    public  void setup(){
+
         driver = Driver.getDriver();
     }
 
@@ -53,6 +58,7 @@ public class BranchesTest {
         branches.createBtn.click();
 
         Assert.assertEquals("THE OLD ONE", branches.checkBranchName.getText());
+        System.out.println("johny ");
 
     }
 
