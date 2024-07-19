@@ -8,7 +8,7 @@ public class Config {
     private static Properties properties;
 
     static {
-        String path = "src/test/resources/configuration.properties";
+        String path = "src/test/resources/configurations.properties";
 
         try{
 
@@ -21,6 +21,7 @@ public class Config {
             e.printStackTrace();
         }
     }
+
 
     public static String getProperty(String key){
         return properties.getProperty(key);
